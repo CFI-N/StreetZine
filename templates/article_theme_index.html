@@ -6,6 +6,7 @@
 <br>
 <ul>
     {% for article in article_data["article"] %}
-    <li><div>{{article["title"]}}</div><button><a href="/nos-articles/{{current_page}}/{{article['title']}}">Voir l'article</a></button> </li>
+    <li>
+        <div>{{article["title"]}}</div><button><a href="/nos-articles/{{current_page}}/{{article['title']}}">Voir l'article</a></button> </li>
     {% endfor %}
 </ul>
