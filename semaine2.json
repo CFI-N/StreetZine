@@ -1,0 +1,54 @@
+{
+    "name": "Les différentes façon d’utiliser le street art",
+    "article": [{
+            "main": 1,
+            "title": "Les collages anti-féminicide",
+            "author": "Apolline",
+            "date": "18.10.2021",
+            "content": {
+                "text": "saut de ligne \n txt",
+                "image1": "",
+            }
+        },
+        {
+            "main": 0,
+            "title": "Rendre hommage",
+            "author": "Stephen",
+            "date": "19.10.2021",
+            "content": {
+                "text": "",
+                "image1": "",
+            }
+        },
+        {
+            "main": 0,
+            "title": "Boulevard Paris 13, le musée en plein air",
+            "author": "Louise",
+            "date": "20.10.2021",
+            "content": {
+                "text": "",
+                "image1": "",
+            }
+        },
+        {
+            "main": 0,
+            "title": "Le street art et la pub",
+            "author": "Clément",
+            "date": "21.10.2021",
+            "content": {
+                "text": "",
+                "image1": "",
+            }
+        },
+        {
+            "main": 0,
+            "title": "Revendiquer une identité",
+            "author": "Callista",
+            "date": "22.10.2021",
+            "content": {
+                "text": "",
+                "image1": "",
+            }
+        },
+    ]
+}
