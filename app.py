@@ -22,5 +22,17 @@ def article_theme_index(theme):
     for item in article_data:
         if theme in item["name"]:
             return render_template("article_theme_index.html", article_data=item, current_page=theme)
-    return render_template("article_theme_index.html", article_data=article_data, current_page=theme)
-    
+    return render_template("404.html")
+
+@app.route("/nos-articles/<theme>/<current_article>")
+def article_build(theme, current_article):
+    for item in article_data:
+        if theme in item["name"]:
+            print("Current theme is " + theme )
+            for article in item["article"]:
+                print("Testing :" + str(article))
+                if current_article in article["title"]:
+                    print("Clicked article is " + str(article))
+                    current_article_data = article
+                    return render_template("article_builder.html", current_article=current_article_data)
+    return render_template("404.html")
