@@ -50,6 +50,6 @@ second_week = {
                 "image1": "",
             }
         },
-        "number": 2,
-    ]
+    ],
+    "number": 2,
 }
