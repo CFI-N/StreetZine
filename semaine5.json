@@ -1,0 +1,25 @@
+{
+    "name" : "Les artistes", #nom du thème de la semaine
+    "articles": [
+        {
+            "main": 0, #mettre 1 si la une
+            "title": "", #nom de l'article
+            "author": "",
+            "date":"",
+            "content":{
+                "text":"", #/n pour sauter de ligne ecrire le texte tout coller 
+                "image":"",
+            }
+        },
+        {
+            "title": "",
+            "author": "",
+            "date":"",
+            "content":{
+                "text":"",
+                "image":"",
+            }
+        },
+    ]
+    
+}
