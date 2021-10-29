@@ -22,6 +22,10 @@ def article_theme_lister():
 
     return render_template("article_lister.html", article_data=article_data )
 
+@app.route("/nos-articles/<theme>")
+def stuff():
+    pass
+
 @app.route("/articles")
 def articles_title_lister():
     
