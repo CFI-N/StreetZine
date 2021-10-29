@@ -30,10 +30,14 @@ def article_theme_index(theme):
         if theme in item["name"]:
             match = "yes!"
             print(theme)
+            print(item["name"])
+            print("pog")
+            return render_template("article_theme_index.html", article_data=article_data, current_page=theme, match=match)
         else:
             match = "no :c"
             print(theme)
-
+            print(item["name"])
+            print("sadpog")
     return render_template("article_theme_index.html", article_data=article_data, current_page=theme, match=match)
 
 @app.route("/articles")
