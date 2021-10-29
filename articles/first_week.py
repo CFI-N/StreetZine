@@ -1,5 +1,5 @@
 first_week = {
-    "name" : "L'historie du stret art",
+    "name" : "L'histoire du street art",
     "article" : [
         {
             "main": 0,
