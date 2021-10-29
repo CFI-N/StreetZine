@@ -1,4 +1,4 @@
-{% for article in json_data["article"] %}
-    <div>{{article["title"]}} / <br> {{article["content"]["text"]}}</div>
+{% for article in article_data %}
+    <div>{{article["name"]}}</div>
 
 {% endfor %}
