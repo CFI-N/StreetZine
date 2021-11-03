@@ -16,7 +16,7 @@ def void_redirect():
     """Redirects the user to a different route
 
     Returns:
-        [redirect]: Change current user's page 
+        redirect: Change current user's page 
     """
     return redirect("/accueil") # On redirige l'utilisateur vers la page d'accueil
 
@@ -29,7 +29,7 @@ def article_theme_lister():
     """Renders a theme list
 
     Returns:
-        [html]: rendered page from the indicated template
+        html: rendered page from the indicated template
     """
     return render_template("article_lister.html", article_data=article_data ) # On crée une page ou on affiche toute les semaines
 
@@ -41,22 +41,46 @@ def article_theme_index(theme):
         theme (str): The theme our user is on
 
     Returns:
-        [html]: rendered page from the indicated template
+        html: rendered page from the indicated template
     """
-    for item in article_data: # Itération dans chaque semaine
-        if theme in item["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
-            return render_template("article_theme_index.html", article_data=item, current_page=theme) # On crée la page article_theme_index qui contient tout les articles du theme actuel
-    return render_template("404.html") # Si le theme est pas dans une des semaines on renvoie l'utilisateur sur une 404.
+
+    # Ici theme est égal a ce qui est dans l'url apres "nos-articles/"
+
+    verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
+    if verification[0]: # Si page_verificator a renvoyé un True dans la premiere valeur du tuple
+        return render_template("article_theme_index.html", article_data=verification[1], current_page=theme) # On crée la page article_theme_index qui contient tout les articles de la semaine actuelle
+    return render_template("404.html") # Si le theme n'est pas dans une des semaines on renvoie l'utilisateur sur une 404.
 
 @app.route("/nos-articles/<theme>/<current_article>") # Route dynamique pour les différents articles dans chaque theme de nos articles
 def article_build(theme, current_article):
-    for item in article_data:
-        if theme in item["name"]:
-            print("Current theme is " + theme )
-            for article in item["article"]:
-                print("Testing :" + str(article))
-                if current_article in article["title"]:
-                    print("Clicked article is " + str(article))
-                    current_article_data = article
-                    return render_template("article_builder.html", current_article=current_article_data)
-    return render_template("404.html")
+    """Renders current_article page
+
+    Args:
+        theme (str): The theme our user is on
+        current_article (str): The article our user is on
+
+    Returns:
+        html: rendered page of the current article
+    """
+
+    # Ici current_article est égal a ce qui est dans l'url apres "nos-articles/{theme}/"
+
+    verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
+    for article in verification[1]["article"]: # on itère chaque article de la semaine
+        if current_article in article["title"]: # si le nom de l'article est dans les articles de la semaine
+            return render_template("article_builder.html", current_article=article) # On crée la page avec les données de l'article actuel
+    return render_template("404.html") # Si current_article n'est pas dans un article on renvoie l'utilisateur sur une 404.
+
+
+def page_verificator(current_page:str) -> tuple:
+    """Verify if a str is in article_date
+
+    Args:
+        current_page (str): string to test
+
+    Returns:
+        tuple: False or true tuple containing week's data if true
+    """
+    for week in article_data: # Itération dans chaque semaine
+        if current_page in week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
+            return (True, week) # On retourne un tuple qui contient True et les données de la page actuelle
