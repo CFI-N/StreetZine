@@ -18,9 +18,9 @@ def void_redirect():
     Returns:
         redirect: Change current user's page 
     """
-    return redirect("/accueil") # On redirige l'utilisateur vers la page d'accueil
+    return redirect("/a-la-une") # On redirige l'utilisateur vers la page d'accueil
 
-@app.route("/accueil") # Route de la page d'accueil
+@app.route("/a-la-une") # Route de la page d'accueil
 def home_page():
     return render_template("home.html", week_list=article_data)
 
