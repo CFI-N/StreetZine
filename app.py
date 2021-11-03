@@ -47,7 +47,8 @@ def article_theme_index(theme):
     # Ici theme est égal a ce qui est dans l'url apres "nos-articles/"
 
     verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
-    if verification[0]: # Si page_verificator a renvoyé un True dans la premiere valeur du tuple
+    print(verification)
+    if verification[0] == True: # Si page_verificator a renvoyé un True dans la premiere valeur du tuple
         return render_template("article_theme_index.html", article_data=verification[1], current_page=theme) # On crée la page article_theme_index qui contient tout les articles de la semaine actuelle
     return render_template("404.html") # Si le theme n'est pas dans une des semaines on renvoie l'utilisateur sur une 404.
 
@@ -67,7 +68,7 @@ def article_build(theme, current_article):
 
     verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
     for article in verification[1]["article"]: # on itère chaque article de la semaine
-        if current_article in article["title"]: # si le nom de l'article est dans les articles de la semaine
+        if current_article == article["title"]: # si le nom de l'article est dans les articles de la semaine
             return render_template("article_builder.html", current_article=article) # On crée la page avec les données de l'article actuel
     return render_template("404.html") # Si current_article n'est pas dans un article on renvoie l'utilisateur sur une 404.
 
@@ -82,5 +83,7 @@ def page_verificator(current_page:str) -> tuple:
         tuple: False or true tuple containing week's data if true
     """
     for week in article_data: # Itération dans chaque semaine
-        if current_page in week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
+        if current_page == week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
             return (True, week) # On retourne un tuple qui contient True et les données de la page actuelle
+        else:
+            return (False, None)
