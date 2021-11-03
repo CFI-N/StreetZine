@@ -22,7 +22,7 @@ def void_redirect():
 
 @app.route("/accueil") # Route de la page d'accueil
 def home_page():
-    pass
+    return render_template("home.html", week_list=article_data)
 
 @app.route("/nos-articles") # Route de l'index de nos articles
 def article_theme_lister():
