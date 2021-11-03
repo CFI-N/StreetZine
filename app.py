@@ -1,5 +1,5 @@
 from typing import Match
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import json
 from pathlib import Path
 import os
@@ -12,6 +12,15 @@ working_dir = Path.cwd()
 app = Flask(__name__)
 
 article_data=[first_week, second_week,third_week,fourth_week,fifth_week]
+
+
+@app.route("/")
+def void_redirect():
+    return redirect("/accueil")
+
+@app.route("/accueil")
+def home_page():
+    pass
 
 @app.route("/nos-articles")
 def article_theme_lister():
