@@ -1,3 +1,11 @@
+{% with title=current_page %}
+    {% include "head.html" %}
+{% endwith %}
+
+{% with page="nos-articles" %}
+    {% include "nav.html" %}   
+{% endwith %}
+
 <div>{{current_page}}</div>
 <br>
 <br>

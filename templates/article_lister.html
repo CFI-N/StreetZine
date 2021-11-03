@@ -1,3 +1,11 @@
+{% with title="Nos articles" %}
+    {% include "head.html" %}
+{% endwith %}
+
+{% with page="nos-articles" %}
+    {% include "nav.html" %}   
+{% endwith %}
+
 {% for theme in article_data %}
     <div>{{theme["name"]}}</div>
     <button><a href="nos-articles/{{theme['name']}}">Voir plus d'articles</a></button>
