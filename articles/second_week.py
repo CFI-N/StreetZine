@@ -28,6 +28,7 @@ second_week = {
             "content": {
                 "text": "Si vous êtes déjà baladé dans le 13e arrondissement de Paris ou que vous aillez pris la ligne 6, entre quai de la gare et place d’Italie, vous avez sûrement dû voir des grandes fresques sur des bâtiments. C’est le Boulevard Paris 13, un musée sur le street art en plein air. <br> Autre fois le 13e arrondissement était gris, le quartier avait un peu flatteuse. Elle s’est complétement métamorphosé et met ses tours en valeur grâce aux street artistes du monde entier. Le but est de soigner l’image du quartier et d'attirer les jeunes. <br> Depuis 2009, le 13e arrondissement propose aux Parisiens et aux touristes un parcours de fresques réalisées par des artistes français et internationaux. Initiée par la Galerie Itinérance, en partenariat avec la mairie du 13e arrondissement, cette balade a été pensée comme un véritable musée à ciel ouvert. En offrant un lieu d’expression à des artistes majeurs de l’art urbain, cet arrondissement écrit progressivement l’une des plus belles pages de l’histoire de Street Art et office au quartier une renommée internationale. <br> Boulevard Paris 13 possède un site, sur lequel vous pouvez retrouver les différentes oeuvres, les artistes ainsi que le parcours. Vous y retrouverez des artistes tels que C215, David de la Mano, Invader et bien d’autres. <br> Si vous passez dans le 13e arrondissement, alors n’hésitez pas à faire le parcours !",
                 "image1": "",
+                "quote": "Salut",
             }
         },
         {
