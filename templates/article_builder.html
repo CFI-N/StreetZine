@@ -11,3 +11,22 @@
 <div>{{current_article["author"]}}</div>
 <div>{{current_article["date"]}}</div>
 <p>{{current_article["content"]["text"] | safe}}</p>
+{% if current_article['content']['image1']   %}
+<img src="{{current_article['content']['image1'] | safe}}"> 
+{% endif %}
+
+{% if current_article['content']['image2']   %}
+<img src="{{current_article['content']['image2'] | safe}}"> 
+{% endif %}
+
+{% if current_article['content']['image3']   %}
+<img src="{{current_article['content']['image3'] | safe}}"> 
+{% endif %}
+
+{% if current_article['content']['image4']   %}
+<img src="{{current_article['content']['image4'] | safe}}"> 
+{% endif %}
+
+{% if current_article['content']['image5']   %}
+<img src="{{current_article['content']['image5'] | safe}}"> 
+{% endif %}
