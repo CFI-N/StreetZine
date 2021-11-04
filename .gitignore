@@ -19,8 +19,10 @@ _mailinglist
 docs/_build/
 .vscode
 
+
 # Coverage reports
 htmlcov/
 .coverage
 .coverage.*
 *,cover
+settings.py
