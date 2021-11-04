@@ -1,5 +1,5 @@
 # Importation des modules externes (ce sont des modules codées par d'autre dev, un module est un genre de plugin).
-from flask import Flask, render_template, redirect, Blueprint
+from flask import Flask, render_template, redirect
 from pathlib import Path
 
 # Importation des modules internes, ce sont les modules que nous avons créé pour ce projet.
