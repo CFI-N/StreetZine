@@ -8,5 +8,5 @@
 
 {% for theme in article_data %}
     <div>{{theme["name"]}}</div>
-    <button><a href="nos-articles/{{theme['name']}}">Voir plus d'articles</a></button>
+    <a class="waves-effect waves-light btn" href="nos-articles/{{theme['name']}}">Voir plus d'articles</a>
 {% endfor %}
