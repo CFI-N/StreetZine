@@ -82,7 +82,7 @@ def page_verificator(current_page:str) -> tuple:
         tuple: False or true tuple containing week's data if true
     """
     for week in article_data: # Itération dans chaque semaine
-        if current_page in week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
+        if current_page == week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
             return (True, week) # On retourne un tuple qui contient True et les données de la page actuelle
         else:
             return (False, None)

@@ -9,5 +9,22 @@
 
 <h1>A la une</h1>
 {% for week in week_list%}
-    <div>{{week["name"]}}</div>
+    <h1>{{week["name"]}}</h1>
+    <div class="article_container">
+    {% for article in week["article"] %}
+        <div class="{% if article['main'] == 1 %}main_article{% else %}sub_article{% endif %}">{{ article["title"]}}</div>
+        <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
+        <div>{{article["content"]["text"] | safe }}</div>
+        <div class="read_more_btn">
+            <div>Lire la suite</div>
+            <button><a href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a></button>
+        </div>
+    {% endfor %}
+    </div>
 {% endfor %}
+
+<style>
+    .main_article{
+        color: red;
+    }
+</style>
