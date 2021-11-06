@@ -84,8 +84,7 @@ def page_verificator(current_page:str) -> tuple:
     for week in article_data: # Itération dans chaque semaine
         if current_page == week["name"]: # Si le nom de la semaine correspond a un nom de semaine dans toute nos semaines =>
             return (True, week) # On retourne un tuple qui contient True et les données de la page actuelle
-        else:
-            return (False, None)
+    return (False, None)
 
 @app.route("/a-propos")
 def about_us():
