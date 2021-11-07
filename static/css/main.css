@@ -7,58 +7,58 @@
   color: linear-gradient(90deg, #2d7ec2 0%, #a080b9 100%);
 }
 .primary {
-  color: #2d7ec2;
+  color: #2d7ec2 !important;
 }
 .p_light {
-  color: #6aadf5;
+  color: #6aadf5 !important;
 }
 .p_dark {
-  color: #005291;
+  color: #005291 !important;
 }
 .secondary {
-  color: #374c9c;
+  color: #374c9c !important;
 }
 .s_light {
-  color: #6b77ce;
+  color: #6b77ce !important;
 }
 .s_dark {
-  color: #00256d;
+  color: #00256d !important;
 }
 .accents {
-  color: #a080b9;
+  color: #a080b9 !important;
 }
 .a_light {
-  color: #d2b0eb;
+  color: #d2b0eb !important;
 }
 .a_dark {
-  color: #715389;
+  color: #715389 !important;
 }
 .primaryB {
-  background-color: #2d7ec2;
+  background-color: #2d7ec2 !important;
 }
 .p_lightB {
-  background-color: #6aadf5;
+  background-color: #6aadf5 !important;
 }
 .p_darkB {
-  background-color: #005291;
+  background-color: #005291 !important;
 }
 .secondaryB {
-  background-color: #374c9c;
+  background-color: #374c9c !important;
 }
 .s_lightB {
-  background-color: #6b77ce;
+  background-color: #6b77ce !important;
 }
 .s_darkB {
-  background-color: #00256d;
+  background-color: #00256d !important;
 }
 .accentsB {
-  background-color: #a080b9;
+  background-color: #a080b9 !important;
 }
 .a_lightB {
-  background-color: #d2b0eb;
+  background-color: #d2b0eb !important;
 }
 .a_darkB {
-  background-color: #715389;
+  background-color: #715389 !important;
 }
 .uB {
   font-family: "ubuntu";
@@ -110,29 +110,29 @@
 body {
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #a080b9 #005291;
+  scrollbar-color: #a080b9 #005291 !important;
 }
 body::-webkit-scrollbar {
   width: 10px;
 }
 body::-webkit-scrollbar-track {
-  background: #005291;
+  background: #005291 !important;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #a080b9;
+  background-color: #a080b9 !important;
   border-radius: 20px;
-  border: 3px solid #005291;
+  border: 3px solid #005291 !important;
 }
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #374c9c;
+  background-color: #374c9c !important;
   border-radius: 20px;
-  border: 3px solid #005291;
+  border: 3px solid #005291 !important;
   cursor: pointer;
 }
 body::-webkit-scrollbar-thumb:focus {
-  background-color: #374c9c;
+  background-color: #374c9c !important;
   border-radius: 20px;
-  border: 0px solid #374c9c;
+  border: 0px solid #374c9c !important;
 }
 nav {
   position: fixed;
