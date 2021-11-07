@@ -6,6 +6,60 @@
   color: #2d7ec2;
   color: linear-gradient(90deg, #2d7ec2 0%, #a080b9 100%);
 }
+.primary {
+  color: #2d7ec2;
+}
+.p_light {
+  color: #6aadf5;
+}
+.p_dark {
+  color: #005291;
+}
+.secondary {
+  color: #374c9c;
+}
+.s_light {
+  color: #6b77ce;
+}
+.s_dark {
+  color: #00256d;
+}
+.accents {
+  color: #a080b9;
+}
+.a_light {
+  color: #d2b0eb;
+}
+.a_dark {
+  color: #715389;
+}
+.primaryB {
+  background-color: #2d7ec2;
+}
+.p_lightB {
+  background-color: #6aadf5;
+}
+.p_darkB {
+  background-color: #005291;
+}
+.secondaryB {
+  background-color: #374c9c;
+}
+.s_lightB {
+  background-color: #6b77ce;
+}
+.s_darkB {
+  background-color: #00256d;
+}
+.accentsB {
+  background-color: #a080b9;
+}
+.a_lightB {
+  background-color: #d2b0eb;
+}
+.a_darkB {
+  background-color: #715389;
+}
 .uB {
   font-family: "ubuntu";
   font-weight: 800;
@@ -82,6 +136,8 @@ body::-webkit-scrollbar-thumb:focus {
 }
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
 }
 .BIG {
   font-size: 10em;
