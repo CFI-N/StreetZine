@@ -6,25 +6,46 @@
     {% include "nav.html" %}   
 {% endwith %}
 
+<section class="article-container fcol ">
 
-<h1>A la une</h1>
-{% for week in week_list%}
-    <h1>{{week["name"]}}</h1>
-    <div class="article_container">
-    {% for article in week["article"] %}
-        <div class="{% if article['main'] == 1 %}main_article{% else %}sub_article{% endif %}">{{ article["title"]}}</div>
-        <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
-        <div>{{article["content"]["text"] | safe }}</div>
-        <div class="read_more_btn">
-            <div>Lire la suite</div>
-            <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
-        </div>
+    <h1 class="uB">A LA UNE</h1>
+    <div class="content fcol">
+    {% for week in week_list%}
+        <section class="article-tile frow space-between">
+
+            <div class="mainArticle">
+                {% for article in week["article"] %}
+                        {% if article['main'] == 1 %}
+                            <article class="mainArticle">
+                                <div class="">{{ article["title"]}}</div>
+                                <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
+                                <div>{{article["content"]["text"] | safe }}</div>
+                                <div class="read_more_btn">
+                                    <div>Lire la suite</div>
+                                    <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
+                                </div>
+                            </article>
+                            {% endif %}
+                {% endfor %}
+            </div>
+            <div class="subArticles">
+                {% for article in week["article"] %}
+                    {% if article['main'] == 0 %}  
+                        <article class="subArticle">
+                            <div class="">{{ article["title"]}}</div>
+                            <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
+                            <div>{{article["content"]["text"] | safe }}</div>
+                            <div class="read_more_btn">
+                                <div>Lire la suite</div>
+                                <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+        </section>
     {% endfor %}
     </div>
-{% endfor %}
 
-<style>
-    .main_article{
-        color: red;
-    }
-</style>
+</section>
