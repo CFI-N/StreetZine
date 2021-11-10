@@ -86,10 +86,6 @@ def page_verificator(current_page:str) -> tuple:
             return (True, week) # On retourne un tuple qui contient True et les données de la page actuelle
     return (False, None)
 
-@app.route("/a-propos")
-def about_us():
-    return render_template("about.html")
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404

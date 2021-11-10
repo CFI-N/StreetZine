@@ -21,7 +21,6 @@
                                 <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
                                 <div>{{article["content"]["text"] | safe }}</div>
                                 <div class="read_more_btn">
-                                    <div>Lire la suite</div>
                                     <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                                 </div>
                             </article>
@@ -30,13 +29,12 @@
             </div>
             <div class="subArticles">
                 {% for article in week["article"] %}
-                    {% if article['main'] == 0 %}  
+                    {% if article['main'] == 0 and loop.index < 3 %} 
                         <article class="subArticle">
                             <div class="">{{ article["title"]}}</div>
                             <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
                             <div>{{article["content"]["text"] | safe }}</div>
                             <div class="read_more_btn">
-                                <div>Lire la suite</div>
                                 <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                             </div>
                         </article>
@@ -49,3 +47,5 @@
     </div>
 
 </section>
+
+{% include "about.html" %}
