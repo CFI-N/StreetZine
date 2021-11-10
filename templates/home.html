@@ -17,7 +17,7 @@
         <div>{{article["content"]["text"] | safe }}</div>
         <div class="read_more_btn">
             <div>Lire la suite</div>
-            <button><a href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a></button>
+            <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
         </div>
     {% endfor %}
     </div>
