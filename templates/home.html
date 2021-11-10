@@ -6,9 +6,13 @@
     {% include "nav.html" %}   
 {% endwith %}
 
-<section class="article-container fcol ">
+<section class="article-container fcol " style="margin-top: 76px;">
 
-    <h1 class="uB">A LA UNE</h1>
+    <div class="section-wrapper frow space-between">
+        <h1 class="uB" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
+        <h2 class="uB" style="width: 30%;padding:10px;font-size:1em;align-self:center;">PLUS D'ARTICLES</h2>
+    </div>
+    
     <div class="content fcol">
     {% for week in week_list%}
         <section class="article-tile frow space-between">
@@ -16,11 +20,11 @@
             <div class="mainArticle">
                 {% for article in week["article"] %}
                         {% if article['main'] == 1 %}
-                            <article class="mainArticle">
+                            <article>
                                 <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
                                 <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
                                 <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
-                                <div class="uR">{{article["content"]["text"] | safe }}</div>
+                                <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
                                 <div class="read_more_btn">
                                     <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                                 </div>
@@ -31,10 +35,11 @@
             <div class="subArticles">
                 {% for article in week["article"] %}
                     {% if article['main'] == 0 and loop.index < 3 %} 
-                        <article class="subArticle">
+                        <article>
                             <div class="">{{ article["title"]}}</div>
+                            {{article['content']['image1']}}
                             <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
-                            <div>{{article["content"]["text"] | safe }}</div>
+                            <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
                             <div class="read_more_btn">
                                 <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                             </div>
@@ -50,3 +55,13 @@
 </section>
 
 {% include "about.html" %}
+
+
+<style>
+article > div,h1 {
+    margin-top: 10px;
+}
+article > h1{
+    line-height: 150% !important;
+}
+</style>
