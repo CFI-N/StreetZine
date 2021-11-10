@@ -26,7 +26,7 @@
                                 <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
                                 <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
                                 <div class="read_more_btn">
-                                    <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
+                                    <div class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
                                 </div>
                             </article>
                             {% endif %}
@@ -65,3 +65,19 @@ article > h1{
     line-height: 150% !important;
 }
 </style>
+
+<script>
+    
+    var actual_url = window.location.href;
+    
+    window.addEventListener('popstate', function (event) {
+        console.log("Url has changed, here's the thing:");
+        console.log("New url is " + event.state);
+        console.log("Old url was " + actual_url);
+    });
+
+    
+    setTimeout(function () {
+        window.history.pushState("test","test", "/test");
+    }, 1000);
+</script>
