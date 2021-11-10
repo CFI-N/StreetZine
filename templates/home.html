@@ -17,9 +17,10 @@
                 {% for article in week["article"] %}
                         {% if article['main'] == 1 %}
                             <article class="mainArticle">
-                                <div class="">{{ article["title"]}}</div>
-                                <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
-                                <div>{{article["content"]["text"] | safe }}</div>
+                                <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
+                                <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
+                                <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
+                                <div class="uR">{{article["content"]["text"] | safe }}</div>
                                 <div class="read_more_btn">
                                     <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                                 </div>

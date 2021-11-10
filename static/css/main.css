@@ -167,6 +167,18 @@ nav {
   transition: 0.3s ease;
   cursor: pointer;
 }
+.mainArticle {
+  width: 50%;
+}
+.mainCover {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 30%;
+}
+.subArticles {
+  width: 50%;
+}
 .BIG {
   font-size: 10em;
   background: #2d7ec2;
