@@ -26,7 +26,7 @@
                                 <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
                                 <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
                                 <div class="read_more_btn">
-                                    <div class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                                    <div class="primaryB waves-effect waves-light btn pageChanger" alt="/nos-articles/{{ week['name']}}/{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
                                 </div>
                             </article>
                             {% endif %}
@@ -67,9 +67,9 @@ article > h1{
 </style>
 
 <script>
-    
+
     var actual_url = window.location.href;
-    
+
     window.addEventListener('popstate', function (event) {
         console.log("Url has changed, here's the thing:");
         console.log("New url is " + event.state);
@@ -77,7 +77,10 @@ article > h1{
     });
 
     
-    setTimeout(function () {
-        window.history.pushState("test","test", "/test");
-    }, 1000);
+    $(".pageChanger").click(function(){
+        let pageChanger = $(this).attr("page");
+
+        window.history.pushState(pageChanger, pageChanger, pageChanger);
+    })
+
 </script>

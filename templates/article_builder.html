@@ -1,36 +1,43 @@
-{% with title=current_article["title"] %} {% include "head.html" %} {% endwith %} {% with page="nos-articles" %} {% include "nav.html" %} {% endwith %}
+{% with title=current_article["title"] %}
+  {% include "head.html" %} 
+{% endwith %} 
 
+{% with page="nos-articles" %} 
+  {% include "nav.html" %} 
+{% endwith %}
 
-<div>{{current_article["title"]}}</div>
-<div>{{current_article["author"]}}</div>
-<div>{{current_article["date"]}}</div>
-<p>{{current_article["content"]["text"] | safe}}</p>
-{% if current_article['content']['image1'] %}
-<img src="{{current_article['content']['image1'] | safe}}"> 
-{% endif %} 
-
-{% if current_article['content']['image2'] %}
-<img src="{{current_article['content']['image2'] | safe}}"> 
-{% endif %} 
-
-{% if current_article['content']['image3'] %}
-<img src="{{current_article['content']['image3'] | safe}}"> 
-{% endif %} 
-
-{% if current_article['content']['image4'] %}
-<img src="{{current_article['content']['image4'] | safe}}"> 
-{% endif %} 
-
-{% if current_article['content']['image5'] %}
-<img src="{{current_article['content']['image5'] | safe}}"> 
-{% endif %} 
-
-{% if current_article['content']['video'] %}
-<video width="320" height="240" controls>
-    <source src="{{current_article['content']['video']}}" type="video/mp4">
-  </video> 
+<div class="content">
+  <div>{{current_article["title"]}}</div>
+  <div>{{current_article["author"]}}</div>
+  <div>{{current_article["date"]}}</div>
+  <p>{{current_article["content"]["text"] | safe}}</p>
+  {% if current_article['content']['image1'] %}
+  <img src="{{current_article['content']['image1'] | safe}}"> 
   {% endif %} 
-  
-  {% if current_article['content']['quote'] %}
-<div>{{current_article['content']['quote'] | safe}}</div>
-{% endif %}
+
+  {% if current_article['content']['image2'] %}
+  <img src="{{current_article['content']['image2'] | safe}}"> 
+  {% endif %} 
+
+  {% if current_article['content']['image3'] %}
+  <img src="{{current_article['content']['image3'] | safe}}"> 
+  {% endif %} 
+
+  {% if current_article['content']['image4'] %}
+  <img src="{{current_article['content']['image4'] | safe}}"> 
+  {% endif %} 
+
+  {% if current_article['content']['image5'] %}
+  <img src="{{current_article['content']['image5'] | safe}}"> 
+  {% endif %} 
+
+  {% if current_article['content']['video'] %}
+  <video width="320" height="240" controls>
+      <source src="{{current_article['content']['video']}}" type="video/mp4">
+    </video> 
+    {% endif %} 
+    
+    {% if current_article['content']['quote'] %}
+  <div>{{current_article['content']['quote'] | safe}}</div>
+  {% endif %}
+</div>

@@ -55,7 +55,7 @@
 body {
     overflow-x: hidden;
     scrollbar-width: thin;
-    scrollbar-color: @accents @p_dark;
+    scrollbar-color: @p_light @primary;
 }
 
 body::-webkit-scrollbar {
@@ -63,24 +63,18 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: @p_dark;
+    background: @primary;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: @accents;
-    border-radius: 20px;
-    border: 3px solid @p_dark;
+    background-color: @p_light;
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background-color: @secondary;
-    border-radius: 20px;
-    border: 3px solid @p_dark;
     cursor: pointer;
 }
 
 body::-webkit-scrollbar-thumb:focus {
     background-color: @secondary;
-    border-radius: 20px;
-    border: 0px solid @secondary;
 }

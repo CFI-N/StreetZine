@@ -6,7 +6,9 @@
     {% include "nav.html" %}   
 {% endwith %}
 
-{% for theme in article_data %}
-    <div class="uB">{{theme["name"]}}</div>
-    <a class="waves-effect waves-light btn uL primaryB" href="nos-articles/{{theme['name']}}">Voir plus d'articles</a>
-{% endfor %}
+<div class="content">
+    {% for theme in article_data %}
+        <div class="uB">{{theme["name"]}}</div>
+        <a class="waves-effect waves-light btn uL primaryB" href="nos-articles/{{theme['name']}}">Voir plus d'articles</a>
+    {% endfor %}
+</div>
