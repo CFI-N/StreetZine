@@ -34,16 +34,18 @@
                                 {% endif %}
                     {% endfor %}
                 </div>
+
+
+
                 <div class="subArticles">
                     {% for article in week["article"] %}
                         {% if article['main'] == 0 and loop.index < 3 %} 
                             <article>
                                 <div class="">{{ article["title"]}}</div>
-                                {{article['content']['image1']}}
                                 <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
                                 <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
                                 <div class="read_more_btn">
-                                    <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
+                                    <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
                                 </div>
                             </article>
                         {% endif %}
