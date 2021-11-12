@@ -120,6 +120,24 @@
   flex-direction: column;
   justify-content: center;
 }
+.c-off {
+  transition: 0.3s ease;
+  transform: translateX(-20px) !important;
+  opacity: 0 !important;
+  margin-top: 76px;
+}
+.c-off-alternate {
+  transition: 0.3s ease;
+  transform: translateX(20px) !important;
+  opacity: 0 !important;
+  margin-top: 76px;
+}
+.content {
+  transition: 0.3s ease;
+  transform: translateX(0);
+  opacity: 1;
+  margin-top: 76px;
+}
 .antiscroll {
   overflow: hidden;
 }
@@ -146,6 +164,7 @@ body::-webkit-scrollbar-thumb:focus {
 }
 nav {
   position: fixed;
+  z-index: 500;
   top: 0;
   left: 0;
 }
