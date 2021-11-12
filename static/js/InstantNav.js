@@ -16,8 +16,15 @@ $(document).ready( () => {
     url_data.current_title = document.title;
 })
 
-window.onpopstate = () => {
-    changePage(url_data.previous_page, url_data.previous_title)
+window.onpopstate = function (event) {
+    url_data.previous_page = url_data.current_page;
+    console.log("previous = " + url_data.previous_page);
+    url_data.current_page = document.documentURI;
+    console.log("current = " + url_data.current_page);
+    url_data.current_title = url_data.previous_title;
+    // console.log( url_data.previous_page);
+    // changePage(url_data.previous_page, url_data.previous_title, "override")
+    changePage(document.documentURI,  url_data.previous_title, "override")
 }
 
 $(document).on("click", ".pageChanger", function(){
@@ -32,10 +39,14 @@ $(document).on("click", ".returnBtn", function() {
     window.history.pushState(url_data.current_page, url_data.previous_title, url_data.current_page);
 })
 
-function changePage (page = null, title = null) {
+function changePage (page = null, title = null, override) {
     url_data.current_page = page;
     url_data.current_title = title;
-    setPreviousUrlData();
+    if (override != null) {
+        setPreviousUrlData("override");
+    } else {
+        setPreviousUrlData();
+    }
     clearTimeout(pageLoadingInstance);
     document.title = title;
     $(".content").addClass("c-off-alternate");
@@ -54,8 +65,12 @@ function changePage (page = null, title = null) {
     },500)
 }
 
-function setPreviousUrlData() {
-    url_data.previous_title = document.title;
-    url_data.previous_page = document.documentURI;
+function setPreviousUrlData(override) {
+    if (override != null){
+        console.log("tg");
+    } else {
+        url_data.previous_title = document.title;
+        url_data.previous_page = document.documentURI;
+    }
     console.log(url_data);
 }
