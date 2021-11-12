@@ -8,7 +8,11 @@
 
 <div class="content c-off">
     {% for theme in article_data %}
-        <img src="{{theme['article']}}" alt="">
+        {% for article in theme["article"] %}
+            {% if article["main"] == 1 %}
+            <img src="{{article['content']['image1']}}" alt="">
+            {% endif %}
+        {% endfor %}
         <div class="uB">{{theme["name"]}}</div>
         <a class="waves-effect waves-light btn uL primaryB" href="nos-articles/{{theme['name']}}">Voir plus d'articles</a>
     {% endfor %}
