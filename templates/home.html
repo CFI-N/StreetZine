@@ -6,81 +6,57 @@
     {% include "nav.html" %}   
 {% endwith %}
 
-<section class="article-container fcol " style="margin-top: 76px;">
+<div class="content">
 
-    <div class="section-wrapper frow space-between">
-        <h1 class="uB" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
-        <h2 class="uB" style="width: 30%;padding:10px;font-size:1em;align-self:center;">PLUS D'ARTICLES</h2>
-    </div>
-    
-    <div class="content fcol">
-    {% for week in week_list%}
-        <section class="article-tile frow space-between">
+    <section class="article-container fcol" style="margin-top: 76px;">
 
-            <div class="mainArticle">
-                {% for article in week["article"] %}
-                        {% if article['main'] == 1 %}
+        <div class="section-wrapper frow space-between">
+            <h1 class="uB" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
+            <h2 class="uB" style="width: 30%;padding:10px;font-size:1em;align-self:center;">PLUS D'ARTICLES</h2>
+        </div>
+        
+        <div class="content fcol">
+        {% for week in week_list%}
+            <section class="article-tile frow space-between">
+
+                <div class="mainArticle">
+                    {% for article in week["article"] %}
+                            {% if article['main'] == 1 %}
+                                <article>
+                                    <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
+                                    <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
+                                    <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
+                                    <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
+                                    <div class="read_more_btn">
+                                        <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                                    </div>
+                                </article>
+                                {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="subArticles">
+                    {% for article in week["article"] %}
+                        {% if article['main'] == 0 and loop.index < 3 %} 
                             <article>
-                                <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
-                                <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
-                                <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
-                                <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
+                                <div class="">{{ article["title"]}}</div>
+                                {{article['content']['image1']}}
+                                <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
+                                <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
                                 <div class="read_more_btn">
-                                    <div class="primaryB waves-effect waves-light btn pageChanger" alt="/nos-articles/{{ week['name']}}/{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                                    <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
                                 </div>
                             </article>
-                            {% endif %}
-                {% endfor %}
-            </div>
-            <div class="subArticles">
-                {% for article in week["article"] %}
-                    {% if article['main'] == 0 and loop.index < 3 %} 
-                        <article>
-                            <div class="">{{ article["title"]}}</div>
-                            {{article['content']['image1']}}
-                            <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
-                            <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
-                            <div class="read_more_btn">
-                                <a class="primaryB waves-effect waves-light btn" href="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</a>
-                            </div>
-                        </article>
-                    {% endif %}
-                {% endfor %}
-            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
 
-        </section>
-    {% endfor %}
-    </div>
+            </section>
+        {% endfor %}
+        </div>
 
-</section>
-
-{% include "about.html" %}
+        {% include "about.html" %}
+        
+    </section>
 
 
-<style>
-article > div,h1 {
-    margin-top: 10px;
-}
-article > h1{
-    line-height: 150% !important;
-}
-</style>
-
-<script>
-
-    var actual_url = window.location.href;
-
-    window.addEventListener('popstate', function (event) {
-        console.log("Url has changed, here's the thing:");
-        console.log("New url is " + event.state);
-        console.log("Old url was " + actual_url);
-    });
-
-    
-    $(".pageChanger").click(function(){
-        let pageChanger = $(this).attr("page");
-
-        window.history.pushState(pageChanger, pageChanger, pageChanger);
-    })
-
-</script>
+</div>
