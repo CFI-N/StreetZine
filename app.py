@@ -66,9 +66,10 @@ def article_build(theme, current_article):
     # Ici current_article est égal a ce qui est dans l'url apres "nos-articles/{theme}/"
 
     verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
-    for article in verification[1]["article"]: # on itère chaque article de la semaine
-        if current_article in article["title"]: # si le nom de l'article est dans les articles de la semaine
-            return render_template("article_builder.html", current_article=article) # On crée la page avec les données de l'article actuel
+    if verification[1] != None:
+        for article in verification[1]["article"]: # on itère chaque article de la semaine
+            if current_article in article["title"]: # si le nom de l'article est dans les articles de la semaine
+                return render_template("article_builder.html", current_article=article) # On crée la page avec les données de l'article actuel
     return render_template("404.html") # Si current_article n'est pas dans un article on renvoie l'utilisateur sur une 404.
 
 

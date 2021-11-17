@@ -7,6 +7,9 @@
 {% endwith %}
 
 <div class="content c-off">
+
+    <div class="primaryB waves-effect waves-light btn returnBtn">RETOUR</div>
+
     <div class="uB">{{current_page}}</div>
     <br>
     <br>
@@ -16,7 +19,9 @@
     <ul>
         {% for article in article_data["article"] %}
         <li>
-            <div>{{article["title"]}}</div><a class="primaryB waves-effect waves-light btn " href="/nos-articles/{{current_page}}/{{article['title']}}">Voir l'article</a></li>
+            <div>{{article["title"]}}</div>
+            <div class="pageChanger primaryB waves-effect waves-light btn " page="/nos-articles/{{current_page}}/{{article['title']}}" title="{{article['title']}}">Voir l'article</div>
+        </li>
         {% endfor %}
     </ul>
 </div>
