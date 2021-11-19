@@ -56,11 +56,13 @@ function changePage (page = null, title = null, override) {
         $(".content").load(page + " .content");
         setTimeout( () => {
             $(".content").removeClass("c-off");
+            changeActiveLink(page)
         },50)
     }, 300)
     kekInstance = setTimeout(() => {
         if ($(".content").hasClass("c-off")) {
             $(".content").removeClass("c-off");
+            changeActiveLink(page)
         }
     },500)
 }
@@ -76,7 +78,14 @@ function setPreviousUrlData(override) {
 }
 
 function changeActiveLink(url) {
-    
-    $("#homeLink").addClass("active");
-    $("#articleLink").removeClass("active");
+    if (url.includes("a-la-une")) {
+        $("#homeLink").addClass("active");
+        $("#articleLink").removeClass("active");
+    } else if (url.includes("nos-articles")) {
+        $("#homeLink").removeClass("active");
+        $("#articleLink").addClass("active");
+    } else {
+        $("#homeLink").removeClass("active");
+        $("#articleLink").removeClass("active");
+    }
 }
