@@ -49,6 +49,7 @@ def article_theme_index(theme):
     verification = page_verificator(theme) # On teste si la page actuelle correspond a un nom de semaine, il est important de stocker ça dans une variable car on aura besoin des données de la semaine que la fonction page_verificator nous renvoie
     if verification[0] == True: # Si page_verificator a renvoyé un True dans la premiere valeur du tuple
         return render_template("article_theme_index.html", article_data=verification[1], current_page=theme) # On crée la page article_theme_index qui contient tout les articles de la semaine actuelle
+    print("error found")
     return render_template("404.html") # Si le theme n'est pas dans une des semaines on renvoie l'utilisateur sur une 404.
 
 @app.route("/nos-articles/<theme>/<current_article>") # Route dynamique pour les différents articles dans chaque theme de nos articles

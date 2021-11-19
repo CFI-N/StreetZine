@@ -42,6 +42,7 @@ $(document).on("click", ".returnBtn", function() {
 function changePage (page = null, title = null, override) {
     url_data.current_page = page;
     url_data.current_title = title;
+
     if (override != null) {
         setPreviousUrlData("override");
     } else {
@@ -53,6 +54,7 @@ function changePage (page = null, title = null, override) {
     pageLoadingInstance = setTimeout( () => {
         $(".content").empty();
         $(".content").removeClass("c-off-alternate");
+        console.log("new page: " + page + " new title: " + title);
         $(".content").load(page + " .content");
         setTimeout( () => {
             $(".content").removeClass("c-off");
