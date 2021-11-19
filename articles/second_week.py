@@ -7,7 +7,7 @@ second_week = {
             "date": "18.10.2021",
             "content": {
                 "text": "Sûrement vous promener dans la rue ces derniers temps vous a permis de trouver les messages impactant des colleuses. Elles collent des phrases en papier lettre par lettre dénonçant féminicides, viols, et toutes sortes de violences à l'égard des femmes. <br><br>Un regard dur, Lola justifie ça par le fait que l’on lui à appris à ne pas sourire sur les images qu’elle renvoie, toujours être en colère, elles défendent un sujet grave qui nécessite d’être prises au sérieux, en générale la culture d’aujourd’hui renvoie une image très sexualisé des femmes, il faut casser cette idée et inspirer les femmes.",
-                "image1": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MxUUrH4zJc0Ww0dIgu65_6JIaJgFxA-Olg-3BRgzTOB22dyxFLKYxDoKRRcORik071xNmQfgcMOlwQDrdcuewMpKXxj3GtKVHjfl0=s512",
+                "image1": "/static/img/colleuse.jpg",
                 "video": "https://www.youtube.com/watch?v=gICh39LP2K8",
             }
         },
@@ -18,7 +18,7 @@ second_week = {
             "date": "19.10.2021",
             "content": {
                 "text": "Le street art, ce n’est pas seulement embellir les murs ou dénoncer certaines injustices. Certains artistes en profitent aussi pour rendre hommage à diverses personnalités, parfois à des institutions entières. <br><br>Par exemple, le 5 mars 2021, le street artiste JR a rendu hommage au cinéma, réalisant deux gigantesques collages reprenant une image mythique de Charlie Chaplin dans The Kid (1921) et de Harry Lloyd dans Monte là-dessus (1923). Réalisé pendant le confinement, il évoquait sa lassitude concernant la fermeture des cinémas. <br><br>Mais JR n’est pas le seul à avoir fait cela. Tout autour du monde, on a vu des oeuvres rendant hommage aux attentats de Paris ou encore à George Floyd. Que ce soit en France, aux États-Unis, en Espagne, en Angleterre, en Syrie ou encore en Irlande, de nombreux artistes ont décidé de lui rendre hommage. <br><br>Récemment, Jef Aérosol a fait d’un char Sherman de la Seconde Guerre mondiale une œuvre d’art en rendant hommage aux victimes de la guerre. Il a appelé cette œuvre War is Hell. Elle représente des victimes de victimes, mais on retrouve aussi quelques mots inscrits sur le char. <br><br>Ainsi, le street art ne permet pas seulement d’embellir et ne s’en tient pas seulement aux murs mais se diversifie davantage en utilisant d’autres médiums et d’autres fonctions.",
-                "image1": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MuSoFP_W7I7l8wHdArEo6zUbH_eeiEQ4QDDBJCPDcdGcQdo0N2aV1VlTJKh46HGc8OlzLA9o2SiwlGN8ZrFyi9Sc5aJbC3TAMj83w=s512",
+                "image1": "/static/img/identité.png",
             }
         },
         {
@@ -38,8 +38,8 @@ second_week = {
             "date": "21.10.2021",
             "content": {
                 "text": "Le street art source de liberté et d'expression permet à l’exprimant de montrer son point de vue. La pub ne sera pas épargnée par cet art, ce qui permettra à certaines marques de chaussures par exemple de promouvoir et vendre leurs produits (Louboutin en 2012 & Nike). Le street art ne sera pas le seul à influencer la pub, car la pub elle aussi influence le street art aussi bien positivement que négativement, avec l’apparition de certains artistes comme Jordan Seiler, Thom Thom, Vermibus et Ox qui décideront d’arranger les pubs à leur manière pour montrer leur point de vue anti-pub. <br>Jordan Seiler lutte dans le monde entier pour contrer la pollution visuelle et la pression publicitaire, grâce à ces œuvres à la fois minimalistes et très graphiques.<br>Thom Thom, armé de son cutter, entaille et mutile les affiches avec une habile précision. Que ce soit directement sur le panneau publicitaire ou sur des affiches arrachées, le style tranchant et incisif de Thom Thom ne laisse pas indifférent.",
-                "image1": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-PaKO5aRa0FekFKxZSFOSKQwNzaugVomVq3yUvFurzUwpyzF_uCWJxfz-lPO-rhyCQJCmy_zZJTHVxLh0XWes0l8Pn3DNe64ogZxq0=s512",
-                "image2": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-PJBW6jAivXJigm7rgW-_HMY8b-5KF8LtnzyFR7OjlQGr5FpFevEVvnYXdwy8SiOkAdM2JYylTFWnIfjBSucnIECw8NNE84y2TLKrk=s512",
+                "image1": "/static/img/pub1.png",
+                "image2": "static/img/pub2.jpg",
             }
         },
         {
@@ -49,7 +49,7 @@ second_week = {
             "date": "22.10.2021",
             "content": {
                 "text": "Le street art possède une spécificité particulière : celle d’être exposé aux yeux de tous, dans un espace public. Il suffit donc de seulement marcher dans la rue pour apercevoir l'œuvre d’un street artiste. Cet art est souvent utilisé pour embellir, dénoncer, mais aussi pour revendiquer une identité. Parfois, l’artiste ne revendique que son identité propre, mais ils sont aussi le reflet d’une culture entière. Il ne cherche pas simplement à revendiquer une identité, mais à montrer un sentiment d’appartenance à un groupe d’individus qui reflète la personne que l’on est. <br>Cette part d’appartenance peut aller de l’appartenance au groupe des street artistes comme à d’autres communautés qui n’ont pas forcément un lien avec l’art. <br><br>C’est ainsi que l’artiste raconte son histoire. Il permettra aussi à d’autres de s’identifier à leur tour. C’est aussi à ce moment-là que l’on constate que la ligne entre la revendication d’une identité, la dénonciation et l'embellissement est fine. Car chaque fois que l’on revendique son identité, on est susceptible de montrer un sentiment d’appartenance tout en dénonçant des actes contre ce groupe ou tout en embellissant un simple mur. ",
-                "image1": "https://lh3.googleusercontent.com/keep-bbsk/AGk0z-O0d_zlpzRwA8lIIj7pRMzqULDFgDI-I8nHlKbF-oWn91a-A80d__0VvVogDYn_-mJEBVGllkeDzlob58a-BlCUkpFpqmyyj_CVWw23=s512",
+                "image1": "/static/img/floyd.png",
                 "quote": "« Le street art, c'est plein de gens qui font ce qu'ils veulent, chacun à sa pensée et son histoire. C'est avant tout des gens qui s'expriment sans pensée commune ni concertation. » - Jérôme Mesnager, street artiste."
             }
         },
