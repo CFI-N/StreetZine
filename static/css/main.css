@@ -212,6 +212,25 @@ article > h1 {
   width: 30%;
   padding: 10px;
 }
+.titleArticle {
+  color: white;
+  font-size: 20px;
+  font-family: 'Ubuntu', cursive;
+}
+.blocArticle {
+  background-color: rgba(160, 128, 185, 0.7);
+  height: 100%;
+  color: white;
+  padding: 20px;
+}
+.subCover {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  max-height: 35vh;
+  height: 1000px;
+  background-color: #2d7ec2 !important;
+}
 .BIG {
   font-size: 10em !important;
   background: #2d7ec2;

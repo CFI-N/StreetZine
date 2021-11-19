@@ -1,10 +1,4 @@
-{% with title="A la une" %}
-    {% include "head.html" %}
-{% endwith %}
-
-{% with page="a-la-une" %}
-    {% include "nav.html" %}   
-{% endwith %}
+{% with title="A la une" %} {% include "head.html" %} {% endwith %} {% with page="a-la-une" %} {% include "nav.html" %} {% endwith %}
 
 <div class="content c-off">
 
@@ -14,46 +8,43 @@
             <h1 class="uB" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
             <h2 class="uB" style="width: 30%;padding:10px;font-size:1em;align-self:center;margin:0 !important;">PLUS D'ARTICLES</h2>
         </div>
-        
+
         <div class="fcol">
-        {% for week in week_list%}
+            {% for week in week_list%}
             <section class="article-tile frow space-between">
 
                 <div class="mainArticle">
-                    {% for article in week["article"] %}
-                            {% if article['main'] == 1 %}
-                                <article>
-                                    <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
-                                    <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
-                                    <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
-                                    <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
-                                    <div class="read_more_btn">
-                                        <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
-                                    </div>
-                                </article>
-                                {% endif %}
-                    {% endfor %}
+                    {% for article in week["article"] %} {% if article['main'] == 1 %}
+                    <article>
+                        <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
+                        <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
+                        <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
+                        <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
+                        <div class="read_more_btn">
+                            <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                        </div>
+                    </article>
+                    {% endif %} {% endfor %}
                 </div>
 
 
 
                 <div class="subArticles">
-                    {% for article in week["article"] %}
-                        {% if article['main'] == 0 and loop.index < 3 %} 
-                            <article>
-                                <div class="">{{ article["title"]}}</div>
-                                <img src="{{article['content']['image1']}}" alt="Couverture article {{article['title']}}">
-                                <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
-                                <div class="read_more_btn">
-                                    <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
-                                </div>
-                            </article>
-                        {% endif %}
-                    {% endfor %}
+                    {% for article in week["article"] %} {% if article['main'] == 0 and loop.index
+                    < 3 %} <article class="subCover" style="background-image: url('{{article['content']['image1']}}');">
+                        <div class="blocArticle">
+                            <div class="titleArticle">{{ article["title"]}}</div>
+                            <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
+                            <div class="read_more_btn">
+                                <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                            </div>
+                        </div>
+                        </article>
+                        {% endif %} {% endfor %}
                 </div>
 
             </section>
-        {% endfor %}
+            {% endfor %}
         </div>
 
         <!-- {% include "about.html" %} -->
