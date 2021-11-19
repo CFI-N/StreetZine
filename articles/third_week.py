@@ -33,7 +33,7 @@ third_week = {
        },
        {
            "main":1,
-           "title":"Musée du street art, Street Art City à Lurcy-Lévis",
+           "title":"Street Art City à Lurcy-Lévis",
            "author":"Clément",
            "date":"29/10/2021",
            "content":{
