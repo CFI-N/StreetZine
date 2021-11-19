@@ -55,7 +55,7 @@ function changePage (page = null, title = null, override) {
     pageLoadingInstance = setTimeout( () => {
         $(".content").empty();
         $(".content").removeClass("c-off-alternate");
-        console.log("new page: " + page + " new title: " + title);
+        console.log("new page: " + page);
         $(".content").load(page + " .content");
         setTimeout( () => {
             $(".content").removeClass("c-off");

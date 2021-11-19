@@ -34,7 +34,7 @@
                     < 3 %} <article class="subCover" style="background-image: url('{{article['content']['image1']}}');">
                         <div class="blocArticle">
                             <div class="wrapper-col space-between" style="height: 100%;">
-                                <div class="titleArticle" style="height: 10%;">{{ article["title"]}}</div>
+                                <div class="titleArticle" style="height: fit-content;">{{ article["title"]}}</div>
                                 <div style="height: 50%;">{{article["content"]["text"] | safe | truncate(200, True) }}</div>
                                 <div class="read_more_btn" style="height: 40%;">
                                     <div class="primaryB waves-effect waves-light btn pageChanger" style="align-self: center;" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
