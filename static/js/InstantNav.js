@@ -29,6 +29,7 @@ window.onpopstate = function (event) {
 
 $(document).on("click", ".pageChanger", function(){
     let newUrl = encodeURI($(this).attr("page"));
+    console.log(newUrl);
     let newTitle = $(this).attr("title") + " - StreetZine";
     changePage(newUrl, newTitle)
     window.history.pushState(newUrl, url_data.previous_title, url_data.current_page);
