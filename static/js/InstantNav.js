@@ -42,6 +42,7 @@ $(document).on("click", ".returnBtn", function() {
 function changePage (page = null, title = null, override) {
     url_data.current_page = page;
     url_data.current_title = title;
+
     if (override != null) {
         setPreviousUrlData("override");
     } else {
@@ -53,14 +54,17 @@ function changePage (page = null, title = null, override) {
     pageLoadingInstance = setTimeout( () => {
         $(".content").empty();
         $(".content").removeClass("c-off-alternate");
+        console.log("new page: " + page + " new title: " + title);
         $(".content").load(page + " .content");
         setTimeout( () => {
             $(".content").removeClass("c-off");
+            changeActiveLink(page)
         },50)
     }, 300)
     kekInstance = setTimeout(() => {
         if ($(".content").hasClass("c-off")) {
             $(".content").removeClass("c-off");
+            changeActiveLink(page)
         }
     },500)
 }
@@ -76,7 +80,14 @@ function setPreviousUrlData(override) {
 }
 
 function changeActiveLink(url) {
-    
-    $("#homeLink").addClass("active");
-    $("#articleLink").removeClass("active");
+    if (url.includes("a-la-une")) {
+        $("#homeLink").addClass("active");
+        $("#articleLink").removeClass("active");
+    } else if (url.includes("nos-articles")) {
+        $("#homeLink").removeClass("active");
+        $("#articleLink").addClass("active");
+    } else {
+        $("#homeLink").removeClass("active");
+        $("#articleLink").removeClass("active");
+    }
 }
