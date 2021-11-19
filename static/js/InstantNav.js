@@ -67,10 +67,16 @@ function changePage (page = null, title = null, override) {
 
 function setPreviousUrlData(override) {
     if (override != null){
-        console.log("tg");
+        // pass
     } else {
         url_data.previous_title = document.title;
         url_data.previous_page = document.documentURI;
     }
     console.log(url_data);
+}
+
+function changeActiveLink(url) {
+    
+    $("#homeLink").addClass("active");
+    $("#articleLink").removeClass("active");
 }
