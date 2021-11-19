@@ -21,11 +21,12 @@ fourth_week = {
                "image1" :""
            }
        },
-       "main":1,
-           "title":"Street Art en Pologne, dans le quartier Zaspa à Gdansk",
-           "author":"Callista",
-           "date":"03/11/2021",
-           "content":{
+       {
+            "main":1,
+            "title":"Street Art en Pologne, dans le quartier Zaspa à Gdansk",
+            "author":"Callista",
+            "date":"03/11/2021",
+            "content":{
                "text" : "Dans l’univers du street art, la Pologne est connue pour posséder un quartier qui est une des plus grandes galeries à ciel ouvert. Dans le quartier résidentiel de Zaspa, à Gdansk, on y retrouve plus de 54 œuvres murales, de quoi faire de la ville une capitale du street art, avec une des plus grandes collections de fresques. <br> C’est en 1979 qu’a eu lieu la révolution artistique en Pologne, à l’occasion d’un festival pour le 1000ème anniversaire de Gdansk. C’est aussi à ce moment-là que la toute première peinture murale a été créée, ainsi que neuf autres pièces. En 2009, le Festival a été relancé, ajoutant désormais 4 œuvres chaque année. C’est ainsi qu’ils égayent les rues et amènent une cohésion sociale sur le plan local. <br> Parmi les artistes polonais, on peut citer Mariusz Waras, qui est considéré comme l’un des leaders mondiaux du street art, Przemek Blejzyk aka Sainer et Mateusz Gapski aka Bezt, qui sont les fondateurs du team Etam Cru, Michał Wręga, Natalia Rak ou encore Elżbieta Dymn. Cette dernière utilise par exemple la dentelle traditionnelle à une échelle immense puisqu’elle l’applique à l’espace urbain. <br> Si Gdansk est une des villes reconnues pour être une capitale du street art, des associations cherchent à redonner vie à des villes qui paraissent au premier abord moins accueillantes. C’est le cas de Lodz, une ville dans laquelle ils ont décidé de lui donner une identité unique avec des programmes de rénovation urbaine pour la faire entrer dans une toute nouvelle dimension touristique et économique. <br> N’hésitez donc pas à aller visiter ces quartiers si jamais vous décidez de voyager en Pologne. ",
                "image1" : ""
            }
