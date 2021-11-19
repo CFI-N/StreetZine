@@ -30,17 +30,18 @@
 
 
                 <div class="subArticles">
-                    {% for article in week["article"] %} {% if article['main'] == 0 and loop.index
-                    < 3 %} <article class="subCover" style="background-image: url('{{article['content']['image1']}}');">
-                        <div class="blocArticle">
-                            <div class="titleArticle">{{ article["title"]}}</div>
-                            <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
-                            <div class="read_more_btn">
-                                <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                    {% for article in week["article"] %} {% if article['main'] == 0 and loop.index < 3 %} 
+                        <article class="subCover" style="background-image: url('{{article['content']['image1']}}');">
+                            <div class="blocArticle">
+                                <div class="titleArticle">{{ article["title"]}}</div>
+                                <div>{{article["content"]["text"] | safe | truncate(200, True) }}</div>
+                                <div class="read_more_btn">
+                                    <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                                </div>
                             </div>
-                        </div>
                         </article>
-                        {% endif %} {% endfor %}
+                    {% endif %} 
+                {% endfor %}
                 </div>
 
             </section>
