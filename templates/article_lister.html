@@ -7,13 +7,18 @@
 {% endwith %}
 
 <div class="content c-off">
+    <div class="fcol" style="flex-wrap: wrap; height: 100%; width: 100%;">
     {% for theme in article_data %}
         {% for article in theme["article"] %}
             {% if article["main"] == 1 %}
-            <img src="{{article['content']['image1']}}" alt="">
+            <div style="background-image: url('{{article['content']['image1']}}');" class="theme-item-bg frow space-between">
             {% endif %}
         {% endfor %}
-        <div class="uB">{{theme["name"]}}</div>
-        <div class="pageChanger waves-effect waves-light btn uL primaryB" page="nos-articles/{{theme['name']}}" title="{{theme['name']}}">Voir plus d'articles</div>
+        <div class="wrapper-row space-between pinkfilter">
+            <div class="uB theme-item-text">{{theme["name"]}}</div>
+            <div class="pageChanger waves-effect waves-light btn uL primaryB" page="nos-articles/{{theme['name']}}" title="{{theme['name']}}">Voir plus d'articles</div>    
+        </div>
+    </div>
     {% endfor %}
+    </div>
 </div>
