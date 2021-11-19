@@ -243,6 +243,14 @@ article > h1 {
   justify-content: left;
   padding: 10px;
 }
+.title-theme-article-list {
+  padding: 20px;
+  font-size: 40px;
+}
+.article-theme-article-list {
+  padding: 20px;
+  font-size: 25px;
+}
 .theme-item-bg {
   min-height: 20vh;
   height: 30%;
