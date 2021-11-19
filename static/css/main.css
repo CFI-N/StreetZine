@@ -233,6 +233,16 @@ article > h1 {
   height: 1000px;
   background-color: #2d7ec2 !important;
 }
+.theme-article-container {
+  width: 30% !important;
+  margin: 10px;
+}
+.theme-article-section {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 10px;
+}
 .BIG {
   font-size: 10em !important;
   background: #2d7ec2;
