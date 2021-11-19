@@ -216,6 +216,8 @@ article > h1 {
   color: white;
   font-size: 20px;
   font-family: 'Ubuntu', cursive;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 .blocArticle {
   background-color: rgba(160, 128, 185, 0.7);
