@@ -243,6 +243,14 @@ article > h1 {
   justify-content: left;
   padding: 10px;
 }
+.title-theme-article-list {
+  padding: 20px;
+  font-size: 40px;
+}
+.article-theme-article-list {
+  padding: 20px;
+  font-size: 25px;
+}
 .BIG {
   font-size: 10em !important;
   background: #2d7ec2;
