@@ -45,10 +45,13 @@ fifth_week = {
        },
         {
            "main":0,
-           "title":"",
-           "author":"",
-           "date":"",
-           "content":{}
+           "title":"Banksy",
+           "author":"Clement Brun",
+           "date":"19 Novembre 2021",
+           "content":{
+               "texte":"Banksy est un artiste de street art qui travaille sous pseudonyme. Son véritable nom et son identité exacte sont inconnus et font toujours l'objet de spéculations. Apparemment britannique et actif depuis les années 1990, il utilise la peinture au pochoir pour faire passer ses messages, qui mêlent souvent politique, humour et poésie. Ses œuvres sont des images humoristiques, parfois combinées à des slogans. Le message est généralement anarchiste, antimilitariste, anticapitaliste ou antisystème et ses personnages sont souvent des rats, des singes, des policiers, des soldats, des enfants, des personnes célèbres ou des personnes âgées. Les premières créations de Banksy apparaissent à Bristol, où il exerce tout d'abord en tant que graffeur, l'une de ses premières œuvres, The Mild Mild West, apparaît sur un mur de Bristol en 1999. Artiste engagé, Banksy transmet à travers ses peintures et diverses créations un message anti-système, visant à pousser son public à la réflexion. Banksy réalise ses pochoirs sur tous les murs du monde. En 2005, il entreprend de peindre sur le mur de Gaza, pour redonner espoir au peuple palestinien. L'artiste contestataire sait comment marquer les esprits. Lors d'une mise aux enchères chez Sotheby's à Londres le 24 octobre 2018, le tableau de l’œuvre iconique La Petite fille au ballon s'autodétruit grâce à un ingénieux mécanisme."
+               "image1":"https://lh3.googleusercontent.com/keep-bbsk/AGk0z-PX6Ja_BJcyH8DUid8rWlGWvmqjdI0Iig9HAzYfB2fxp3lAtIt49UwGxzOgPyiW6quRBc20sC6zywT7DzvDWut916gyJ6kAVD380wI=s512"
+           }
        },
      ],
     "number": 0,
