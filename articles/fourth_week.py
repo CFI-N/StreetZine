@@ -28,7 +28,7 @@ fourth_week = {
             "date":"03/11/2021",
             "content":{
                "text" : "Dans l’univers du street art, la Pologne est connue pour posséder un quartier qui est une des plus grandes galeries à ciel ouvert. Dans le quartier résidentiel de Zaspa, à Gdansk, on y retrouve plus de 54 œuvres murales, de quoi faire de la ville une capitale du street art, avec une des plus grandes collections de fresques. <br> C’est en 1979 qu’a eu lieu la révolution artistique en Pologne, à l’occasion d’un festival pour le 1000ème anniversaire de Gdansk. C’est aussi à ce moment-là que la toute première peinture murale a été créée, ainsi que neuf autres pièces. En 2009, le Festival a été relancé, ajoutant désormais 4 œuvres chaque année. C’est ainsi qu’ils égayent les rues et amènent une cohésion sociale sur le plan local. <br> Parmi les artistes polonais, on peut citer Mariusz Waras, qui est considéré comme l’un des leaders mondiaux du street art, Przemek Blejzyk aka Sainer et Mateusz Gapski aka Bezt, qui sont les fondateurs du team Etam Cru, Michał Wręga, Natalia Rak ou encore Elżbieta Dymn. Cette dernière utilise par exemple la dentelle traditionnelle à une échelle immense puisqu’elle l’applique à l’espace urbain. <br> Si Gdansk est une des villes reconnues pour être une capitale du street art, des associations cherchent à redonner vie à des villes qui paraissent au premier abord moins accueillantes. C’est le cas de Lodz, une ville dans laquelle ils ont décidé de lui donner une identité unique avec des programmes de rénovation urbaine pour la faire entrer dans une toute nouvelle dimension touristique et économique. <br> N’hésitez donc pas à aller visiter ces quartiers si jamais vous décidez de voyager en Pologne. ",
-               "image1" : ""
+               "image1" : "/static/img/semaine4Pologne.jpg"
            }
         },
         {
@@ -38,7 +38,7 @@ fourth_week = {
            "date":"04/11/2021",
            "content":{
                "text" : "Vandalisme, pollution visuelle ou chef-d'œuvre ? Sans surprise, la capitale allemande riche en fresques murales a tranché. Elle offre des murs au street art avec son nouvel espace Urban Nation. Ce musée, qui est le plus grand au monde à se consacrer aux graffitis de manière permanente, est le premier musée consacré au Street Art à Berlin. Ce musée, qui a ouvert ses portes en septembre 2017, offre une scénographie astucieuse et une exposition de près de 150 œuvres d'une centaine d’artistes de street art, dont celles du célèbre Banksy et de Shepard Fairey. Les œuvres, collectées depuis trois ans par la fondation Urban Nation, seront visibles aussi bien à l’extérieur qu’à l’intérieur du musée. La plupart sont reproduites sur toile et non sur pierres ou briques pour mieux les conserver. <br> Urban Nation propose une bourse de 6 mois à Berlin nommée Fresh A.I.R pour treize artistes ou professionnels de la culture dans le domaine de l'Art Urbain et Nouvel Art Contemporain. Il propose aussi des projets pour le divertissement et l’éveil artistique des personnes y participant. Ces projets sont “ONE WALLS”, “PROJEKTRAUM“, “COMMUNITY WALLS” et “PROJEKT M/”",
-               "image1" : ""
+               "image1" : "/static/img/semaine4Berlin.jpg"
            }
        },
         {
