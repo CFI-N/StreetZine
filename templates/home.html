@@ -14,19 +14,20 @@
             <section class="article-tile frow space-between">
 
                 <div class="mainArticle">
-                    {% for article in week["article"] %} {% if article['main'] == 1 %}
-                    <article>
-                        <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
-                        <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
-                        <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
-                        <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
-                        <div class="read_more_btn">
-                            <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
-                        </div>
-                    </article>
-                    {% endif %} {% endfor %}
+                    {% for article in week["article"] %}
+                        {% if article['main'] == 1 %}
+                        <article>
+                            <div class="mainCover" style="background-image: url('{{article['content']['image1']}}');"></div>
+                            <h1 class="p_a_gradient_text_reverz">{{ article["title"]}}</h1>
+                            <div class="uL">{{article["author"]}} | {{article["date"]}}</div>
+                            <div class="uR">{{article["content"]["text"] | safe | truncate(500, True) }}</div>
+                            <div class="read_more_btn">
+                                <div class="primaryB waves-effect waves-light btn pageChanger" title="{{article['title']}}" page="/nos-articles/{{ week['name']}}/{{article['title']}}">Lire la suite</div>
+                            </div>
+                        </article>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-
 
 
                 <div class="subArticles">
@@ -49,7 +50,7 @@
             {% endfor %}
         </div>
 
-        <!-- {% include "about.html" %} -->
+        {# {% include "about.html" %}  #}
 
     </section>
 

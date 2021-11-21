@@ -92,3 +92,10 @@ def page_verificator(current_page:str) -> tuple:
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
+
+@app.context_processor
+def utility_functions():
+    def print_in_console(message):
+        print (str(message))
+
+    return dict(mdebug=print_in_console)
