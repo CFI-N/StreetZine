@@ -48,7 +48,7 @@ third_week = {
            "date":"30/10/2021",
            "content":{
                "text":"",
-               "image1":"/static/img/pieuvre.jpg",
+               "image1":"/static/img/semaine3StreetArtBordeaux.jpg",
            }
        },
     ],
