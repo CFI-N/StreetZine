@@ -47,7 +47,7 @@ third_week = {
            "author":"Louise",
            "date":"30/10/2021",
            "content":{
-               "text":"",
+               "text":"La ville de Bordeaux est mondialement connue pour son vin, son caractère historique et patrimonial, elle commence aussi à se distinguer par sa contribution au petit monde du street art. <br> <br>En effet, de plus en plus de fresques ont vu le jour à Bordeaux sous l’impulsion de divers collectifs et d’artistes indépendants qui rivalisent d’originalité et de créativité. <br><br> Que vous soyez amateur de street art ou simplement curieux de découvrir ce mode d’expression qui a trop longtemps été incompris voire méprisé, plusieurs offices de tourisme vous proposeront différentes façons de visiter Bordeaux et le street art qui anime cette ville, par exemple à vélo. <br> <br>Voici quelques endroits à Bordeaux dans lequel vous pourriez vous balader et découvrir le street art qui embellit cette magnifique ville. <br>Le street art à Darwin, une scène importante pour la culture à Bordeaux. La culture urbaine a toujours été présente dans cet espace. Des skateurs, des danseurs de hip hop et des graffeurs cohabitent en harmonie. Les bâtiments sont ornés de fresques immenses réalisées par différents artistes. Vous y retrouverez de nombreuses œuvres de Skou1995 mais aussi Mimil, la fameuse créature mi-homme mi-renard de Selor, un artiste bordelais. <br> <br>Vous pouvez vous balader entre les quartiers St Michel - Ste Croix et Victoire pour découvrir plein de street art. Ces quartiers sont très agréables de s’y promener pour y chasser le street art la journée.",
                "image1":"/static/img/semaine3StreetArtBordeaux.jpg",
            }
        },
