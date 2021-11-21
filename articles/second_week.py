@@ -39,7 +39,7 @@ second_week = {
             "content": {
                 "text": "Le street art source de liberté et d'expression permet à l’exprimant de montrer son point de vue. La pub ne sera pas épargnée par cet art, ce qui permettra à certaines marques de chaussures par exemple de promouvoir et vendre leurs produits (Louboutin en 2012 & Nike). Le street art ne sera pas le seul à influencer la pub, car la pub elle aussi influence le street art aussi bien positivement que négativement, avec l’apparition de certains artistes comme Jordan Seiler, Thom Thom, Vermibus et Ox qui décideront d’arranger les pubs à leur manière pour montrer leur point de vue anti-pub. <br>Jordan Seiler lutte dans le monde entier pour contrer la pollution visuelle et la pression publicitaire, grâce à ces œuvres à la fois minimalistes et très graphiques.<br>Thom Thom, armé de son cutter, entaille et mutile les affiches avec une habile précision. Que ce soit directement sur le panneau publicitaire ou sur des affiches arrachées, le style tranchant et incisif de Thom Thom ne laisse pas indifférent.",
                 "image1": "/static/img/pub1.png",
-                "image2": "static/img/pub2.jpg",
+                "image2": "/static/img/pub2.jpg",
             }
         },
         {
