@@ -282,3 +282,22 @@ h1 {
   font-size: 3em !important;
   margin: 0 !important;
 }
+.about-us {
+  width: 100%;
+  background-color: #263238 !important;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.about-us-title {
+  font-size: 3em;
+  font-family: "ubuntu";
+  font-weight: 800;
+  color: white;
+}
+.about-us-text {
+  font-family: "ubuntu";
+  font-weight: 400;
+  font-size: 1.5em;
+  color: white;
+}
