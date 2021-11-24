@@ -52,6 +52,7 @@ function changePage (page = null, title = null, override) {
     clearTimeout(pageLoadingInstance);
     document.title = title;
     $(".content").addClass("c-off-alternate");
+    $("footer").addClass("c-off-alternate");
     pageLoadingInstance = setTimeout( () => {
         $(".content").empty();
         $(".content").removeClass("c-off-alternate");
@@ -60,6 +61,7 @@ function changePage (page = null, title = null, override) {
         setTimeout( () => {
             $(".content").removeClass("c-off");
             changeActiveLink(page)
+            $("footer").removeClass("c-off-alternate");
         },50)
     }, 300)
     kekInstance = setTimeout(() => {
