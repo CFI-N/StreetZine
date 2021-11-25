@@ -7,41 +7,50 @@
 {% endwith %}
 
 <div class="content c-off">
-  <div class="primaryB waves-effect waves-light btn returnBtn">RETOUR</div>
+  <article style="padding: 20px;">
+    <div class="primaryB waves-effect waves-light btn returnBtn">RETOUR</div>
+    <section class="articleContent fcol">
+      <h1 class="uB">{{current_article["title"]}}</h1>
+      <div class="uL"  style="margin-top: 10px;">{{current_article["author"]}} | {{current_article["date"]}}</div>
+      <div class="wrapper-row">
+        <p class="uR" style="width:50%;padding: 0 10px 0 0 0;">{{current_article["content"]["text"] | safe}}</p>
+        {% if current_article['content']['image1'] %}
+        <img src="{{current_article['content']['image1'] | safe}}" class="articleImgContent" style="width:50%;padding: 0 0 0 10px;"> 
+        {% endif %} 
+      </div>
+    </section>
 
-  <div>{{current_article["title"]}}</div>
-  <div>{{current_article["author"]}}</div>
-  <div>{{current_article["date"]}}</div>
-  <p>{{current_article["content"]["text"] | safe}}</p>
-  {% if current_article['content']['image1'] %}
-  <img src="{{current_article['content']['image1'] | safe}}"> 
-  {% endif %} 
+    <section class="mediaContent frow" style="margin-top: 20px;">
 
-  {% if current_article['content']['image2'] %}
-  <img src="{{current_article['content']['image2'] | safe}}"> 
-  {% endif %} 
 
-  {% if current_article['content']['image3'] %}
-  <img src="{{current_article['content']['image3'] | safe}}"> 
-  {% endif %} 
+      {% if current_article['content']['image2'] %}
+        <img src="{{current_article['content']['image2'] | safe}}" class="articleImgContent"> 
+      {% endif %} 
 
-  {% if current_article['content']['image4'] %}
-  <img src="{{current_article['content']['image4'] | safe}}"> 
-  {% endif %} 
+      {% if current_article['content']['image3'] %}
+        <img src="{{current_article['content']['image3'] | safe}}" class="articleImgContent"> 
+      {% endif %} 
 
-  {% if current_article['content']['image5'] %}
-  <img src="{{current_article['content']['image5'] | safe}}"> 
-  {% endif %} 
+      {% if current_article['content']['image4'] %}
+        <img src="{{current_article['content']['image4'] | safe}}" class="articleImgContent"> 
+      {% endif %} 
 
-  {% if current_article['content']['video'] %}
-  <video width="320" height="240" controls>
-      <source src="{{current_article['content']['video']}}" type="video/mp4">
-    </video> 
-    {% endif %} 
-    
-    {% if current_article['content']['quote'] %}
-  <div>{{current_article['content']['quote'] | safe}}</div>
-  {% endif %}
+      {% if current_article['content']['image5'] %}
+        <img src="{{current_article['content']['image5'] | safe}}" class="articleImgContent"> 
+      {% endif %} 
+
+      {% if current_article['content']['video'] %}
+        <iframe id="ytplayer" type="text/html" width="640" height="360" src="{{current_article['content']['video']}}" frameborder="0">
+      {% endif %} 
+        
+      {% if current_article['content']['quote'] %}
+        <div>{{current_article['content']['quote'] | safe}}</div>
+      {% endif %}
+
+    </section>
+
+  </article>
+
 </div>
 
 {% include "footer.html" %}
