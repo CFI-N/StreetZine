@@ -50,6 +50,7 @@ function changePage (page = null, title = null, override) {
         setPreviousUrlData();
     }
     clearTimeout(pageLoadingInstance);
+    clearTimeout(kekInstance);
     document.title = title;
     $(".content").addClass("c-off-alternate");
     $("footer").addClass("c-off-alternate");
@@ -62,12 +63,15 @@ function changePage (page = null, title = null, override) {
             $(".content").removeClass("c-off");
             changeActiveLink(page)
             $("footer").removeClass("c-off-alternate");
+            footerCalc();
         },50)
     }, 300)
     kekInstance = setTimeout(() => {
         if ($(".content").hasClass("c-off")) {
             $(".content").removeClass("c-off");
-            changeActiveLink(page)
+            changeActiveLink(page);
+            $("footer").removeClass("c-off-alternate");
+            footerCalc();
         }
     },500)
 }

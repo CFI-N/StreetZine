@@ -142,6 +142,7 @@
   overflow: hidden;
 }
 body {
+  min-height: calc(100vh - 76px);
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #6aadf5 #2d7ec2 !important;
@@ -232,6 +233,10 @@ article > h1 {
   max-height: 35vh;
   height: 1000px;
   background-color: #2d7ec2 !important;
+}
+.articleImgContent {
+  width: fit-content;
+  height: fit-content;
 }
 .theme-article-container {
   width: 30% !important;
