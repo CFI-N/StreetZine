@@ -238,6 +238,9 @@ article > h1 {
   width: fit-content;
   height: fit-content;
 }
+.articleQuote {
+  opacity: 0.3;
+}
 .theme-article-container {
   width: 30% !important;
   margin: 10px;

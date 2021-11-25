@@ -6,6 +6,8 @@
   {% include "nav.html" %} 
 {% endwith %}
 
+{% include "footer.html" %}
+
 <div class="content c-off">
   <article style="padding: 20px;">
     <div class="primaryB waves-effect waves-light btn returnBtn">RETOUR</div>
@@ -24,27 +26,31 @@
 
 
       {% if current_article['content']['image2'] %}
-        <img src="{{current_article['content']['image2'] | safe}}" class="articleImgContent"> 
+        <img style="width:50%;padding: 0 10px 0 0 0;"  src="{{current_article['content']['image2'] | safe}}" class="articleImgContent"> 
       {% endif %} 
 
       {% if current_article['content']['image3'] %}
-        <img src="{{current_article['content']['image3'] | safe}}" class="articleImgContent"> 
+        <img style="width:50%;padding: 0 10px 0 0 0;" src="{{current_article['content']['image3'] | safe}}" class="articleImgContent"> 
       {% endif %} 
 
       {% if current_article['content']['image4'] %}
-        <img src="{{current_article['content']['image4'] | safe}}" class="articleImgContent"> 
+        <img style="width:50%;padding: 0 10px 0 0 0;" src="{{current_article['content']['image4'] | safe}}" class="articleImgContent"> 
       {% endif %} 
 
       {% if current_article['content']['image5'] %}
-        <img src="{{current_article['content']['image5'] | safe}}" class="articleImgContent"> 
+        <img style="width:50%;padding: 0 10px 0 0 0;" src="{{current_article['content']['image5'] | safe}}" class="articleImgContent"> 
       {% endif %} 
 
       {% if current_article['content']['video'] %}
-        <iframe id="ytplayer" type="text/html" width="640" height="360" src="{{current_article['content']['video']}}" frameborder="0">
+        <iframe id="ytplayer" type="text/html" src="{{current_article['content']['video']}}" frameborder="0" class="wfluid hfluid">
       {% endif %} 
         
       {% if current_article['content']['quote'] %}
-        <div>{{current_article['content']['quote'] | safe}}</div>
+        <div style="width:50%;padding: 0 0 0 10px;height: fit-content;" class="frow">
+          <div><i class="fas fa-quote-left fa-5x articleQuote aQl"></i></div>
+          <div style="padding: 10px;">{{current_article['content']['quote'] | safe}}</div>
+          <div style="align-self: flex-end;"><i class="fas fa-quote-right fa-5x articleQuote aQr"></i></div>
+        </div>
       {% endif %}
 
     </section>
@@ -52,5 +58,3 @@
   </article>
 
 </div>
-
-{% include "footer.html" %}

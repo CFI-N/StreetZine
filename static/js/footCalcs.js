@@ -1,17 +1,13 @@
-// function footerCalc() {
-//     if ($(window).height() < $(document).height()) {
-//         // pass
-//     } else {
-//         let footer = $("footer")
-//         footer.css({
-//             "position" : "absolute",
-//             "top" : $(window).height() - 76
-//         })
-//     }
-//     // console.log($(window).height);
-//     // console.log($(document).height);
-// }
+function footerCalc() {
+    $("footer").css({
+            "position" : "absolute",
+            "top" : $("body").height() + 76 ,
+            "width": "100vw",
+        })
+ }
 
-// $(document).ready(() => {
-//     footerCalc();
-// })
+$(document).ready(() => {
+    footerCalc();
+})
+
+window.onresize = footerCalc;
