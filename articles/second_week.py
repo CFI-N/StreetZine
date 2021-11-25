@@ -28,7 +28,7 @@ second_week = {
             "content": {
                 "text": "Sûrement vous promener dans la rue ces derniers temps vous a permis de trouver les messages impactant des colleuses. Elles collent des phrases en papier lettre par lettre dénonçant féminicides, viols, et toutes sortes de violences à l'égard des femmes. <br><br>Un regard dur, Lola justifie ça par le fait que l’on lui à appris à ne pas sourire sur les images qu’elle renvoie, toujours être en colère, elles défendent un sujet grave qui nécessite d’être prises au sérieux, en générale la culture d’aujourd’hui renvoie une image très sexualisé des femmes, il faut casser cette idée et inspirer les femmes.",
                 "image1": "/static/img/colleuse.jpg",
-                "video": "https://www.youtube.com/watch?v=gICh39LP2K8",
+                "video": "https://www.youtube.com/embed/gICh39LP2K8",
             }
         },
         {
