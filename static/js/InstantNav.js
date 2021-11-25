@@ -52,6 +52,7 @@ function changePage (page = null, title = null, override) {
     clearTimeout(pageLoadingInstance);
     clearTimeout(kekInstance);
     document.title = title;
+    $("html").animate({ scrollTop: 0 }, 600);
     $(".content").addClass("c-off-alternate");
     $("footer").addClass("c-off-alternate");
     pageLoadingInstance = setTimeout( () => {
