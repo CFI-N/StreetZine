@@ -1,19 +1,19 @@
 {% with title="A la une" %} {% include "head.html" %} {% endwith %} {% with page="a-la-une" %} {% include "nav.html" %} {% endwith %}
 
-<div class="content c-off">
+<div class="content c-off ite">
 
     <section class="article-container fcol">
 
         <div class="section-wrapper frow space-between">
-            <h1 class="uB" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
-            <h2 class="uB" style="width: 30%;padding:10px;font-size:1em;align-self:center;margin:0 !important;">PLUS D'ARTICLES</h2>
+            <h1 class="uB ite0 elt-off" style="width: 70%;padding:10px;font-size:1.5em !important;align-self:center;">A LA UNE</h1>
+            <h2 class="uB ite1 elt-off" style="width: 30%;padding:10px;font-size:1em;align-self:center;margin:0 !important;">PLUS D'ARTICLES</h2>
         </div>
 
         <div class="fcol">
             {% for week in week_list%}
             <section class="article-tile frow space-between">
 
-                <div class="mainArticle">
+                <div class="mainArticle ite{{loop.index0 + 2}} elt-off">
                     {% for article in week["article"] %}
                         {% if article['main'] == 1 %}
                         <article>
@@ -30,7 +30,7 @@
                 </div>
 
 
-                <div class="subArticles">
+                <div class="subArticles ite{{loop.index0 + 2}} elt-off">
                     {% for article in week["article"] %} {% if article['main'] == 0 and loop.index
                     < 3 %} <article class="subCover" style="background-image: url('{{article['content']['image1']}}');">
                         <div class="blocArticle">

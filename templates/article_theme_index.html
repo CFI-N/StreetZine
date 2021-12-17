@@ -8,15 +8,15 @@
 
 {% include "footer.html" %}
 
-<div class="content c-off">
+<div class="content c-off ite">
 
     <div class="primaryB waves-effect waves-light btn returnBtn" style="margin-left: 20px;">RETOUR</div>
 
-    <div class="uB title-theme-article-list">{{current_page}}</div>
-    <div class="uB article-theme-article-list">Articles:</div>
-    <section class="wrapper-row flex theme-article-section ite">
+    <div class="uB title-theme-article-list ite0 elt-off">{{current_page}}</div>
+    <div class="uB article-theme-article-list ite1 elt-off">Articles:</div>
+    <section class="wrapper-row flex theme-article-section">
         {% for article in article_data["article"] %}
-        <article class="subCover theme-article-container ite{{loop.index0}} elt-off" style="background-image: url('{{article['content']['image1']  | escape}}');">
+        <article class="subCover theme-article-container ite{{loop.index0 + 2}} elt-off" style="background-image: url('{{article['content']['image1']  | escape}}');">
             <div class="blocArticle" style="margin: 0 !important;">
                 <div class="wrapper-col space-between" style="height: 100%;">
                     <div class="titleArticle" style="height: fit-content">{{ article["title"]  | escape}}</div>

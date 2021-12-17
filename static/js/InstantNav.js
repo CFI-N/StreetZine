@@ -9,6 +9,7 @@ var url_data = {
 
 $(document).ready( () => {
     $(".content").removeClass("c-off");
+    contentPop();
     if (url_data.previous_page == null) {
         $(".returnBtn").remove();
     }
@@ -64,15 +65,15 @@ function changePage (page = null, title = null, override) {
             $(".content").removeClass("c-off");
             changeActiveLink(page)
             $("footer").removeClass("c-off-alternate");
-            footerCalc();
+            contentPop();
         },50)
     }, 300)
     kekInstance = setTimeout(() => {
         if ($(".content").hasClass("c-off")) {
             $(".content").removeClass("c-off");
+            contentPop();
             changeActiveLink(page);
             $("footer").removeClass("c-off-alternate");
-            footerCalc();
         }
     },500)
 }
@@ -98,4 +99,13 @@ function changeActiveLink(url) {
         $("#homeLink").removeClass("active");
         $("#articleLink").removeClass("active");
     }
+}
+
+function contentPop() {
+    $(".ite").find("*").each(function(i){ 
+        setTimeout ( function(){ 
+            $(".ite").find(".ite" + i ).removeClass("elt-off"); // Make content appear with a delay between them
+            console.log(".ite" + i )
+          },i * 50);
+        }, footerCalc());
 }

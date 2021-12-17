@@ -8,16 +8,16 @@
 
 {% include "footer.html" %}
 <div class="content c-off">
-    <div class="fcol" style="flex-wrap: wrap; height: 100%; width: 100%;">
+    <div class="fcol ite" style="flex-wrap: wrap; height: 100%; width: 100%;">
     {% for theme in article_data %}
         {% for article in theme["article"] %}
             {% if article["main"] == 1 %}
-            <div style="background-image: url('{{article['content']['image1']}}');" class="theme-item-bg frow space-between">
+            <div style="background-image: url('{{article['content']['image1']}}');" class="theme-item-bg frow space-between ite{{loop.index0}} elt-off">
             {% endif %}
         {% endfor %}
-        <div class="wrapper-row space-between pinkfilter">
-            <div class="uB theme-item-text">{{theme["name"]}}</div>
-            <div class="pageChanger waves-effect waves-light btn uL primaryB" page="/nos-articles/{{theme['name']}}" title="{{theme['name']}}">Voir plus d'articles</div>    
+        <div class="wrapper-row space-between pinkfilter ite{{loop.index0}} elt-off">
+            <div class="uB theme-item-text">{{theme["name"] | escape}}</div>
+            <div class="pageChanger waves-effect waves-light btn uL primaryB" page="/nos-articles/{{theme['name'] | escape}}" title="{{theme['name'] | escape}}">Voir plus d'articles</div>    
         </div>
     </div>
     {% endfor %}
